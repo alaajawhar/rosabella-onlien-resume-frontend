@@ -23,7 +23,7 @@ export class HomeScreenComponent implements OnInit {
   }
 
   onSubmit(formDetails: NgForm) {
-    this.cryptoUtil.generateRequestKey().then(res => {
+    this.cryptoUtil.generateRequestKey().then(res => { //
       this.backend.contactMeSubmit(this.contactMeRequest, res).subscribe(res => {
         this.router.navigate(['/thank-you']);
       });
